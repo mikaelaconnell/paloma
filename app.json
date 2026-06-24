@@ -1,25 +1,45 @@
 {
   "expo": {
-    "name": "trip-squad",
-    "slug": "trip-squad",
+    "name": "Paloma",
+    "slug": "paloma",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1e3a5f",
+      "resizeMode": "contain"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.paloma.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Upload photos to your mood board and profile",
+        "NSCameraUsageDescription": "Take photos for your mood board and profile"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#1e3a5f"
       },
-      "predictiveBackGestureEnabled": false
+      "package": "com.paloma.app"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    },
+    "plugins": [
+      "expo-apple-authentication",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Upload photos to your mood board and profile"
+        }
+      ],
+      "expo-splash-screen"
+    ]
   }
 }
