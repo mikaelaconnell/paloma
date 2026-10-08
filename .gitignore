@@ -40,3 +40,8 @@ yarn-error.*
 /ios
 /android
 .env
+
+# local tooling
+.claude/
+CLAUDE.md
+AGENTS.md
